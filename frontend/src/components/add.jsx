@@ -6,9 +6,9 @@ function Add() {
     const [newTask, setNewTask] = useState("");
     const [newStatus, setNewStatus] = useState("");
     const [newDeadline, setNewDeadline] = useState("");
-    const navigate = useNavigate(); // Initialize the navigate function
+    const navigate = useNavigate(); 
 
-    // Function to add task to the database
+    
     const addTask = (e) => {
         e.preventDefault();
         if (!newTask || !newStatus || !newDeadline) {
@@ -23,7 +23,7 @@ function Add() {
                 setNewTask("");
                 setNewStatus("");
                 setNewDeadline("");
-                navigate("/"); // Redirect to the home page
+                navigate("/");
             })
             .catch(err => console.log(err));
     };

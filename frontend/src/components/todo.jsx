@@ -35,7 +35,7 @@ function Todo() {
         }
     };
 
-    // Function to save edited data to the database
+  
     const saveEditedTask = (id) => {
         const editedData = {
             task: editedTask,
@@ -60,13 +60,13 @@ function Todo() {
             .catch(err => console.log(err));
     };
 
-    // Function to delete a task from the database
+   
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this task?")) {
             axios.delete(`http://127.0.0.1:3001/deleteTodoList/${id}`)
                 .then(result => {
                     console.log(result);
-                    setTodoList(todoList.filter((task) => task._id !== id)); // Remove the task from the list
+                    setTodoList(todoList.filter((task) => task._id !== id));
                 })
                 .catch(err => console.log(err));
         }
@@ -78,7 +78,7 @@ function Todo() {
                 <h2 className="text-2xl font-bold">Todo List</h2>
                 <button
                     className="bg-green-600 text-white px-4 py-2 rounded"
-                    onClick={() => navigate('/add')} // Navigate to Add Task page
+                    onClick={() => navigate('/add')} 
                 >
                     Add Task
                 </button>
