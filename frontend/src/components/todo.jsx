@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom"; 
 
 function Todo() {
     const [todoList, setTodoList] = useState([]);
@@ -8,9 +8,9 @@ function Todo() {
     const [editedTask, setEditedTask] = useState("");
     const [editedStatus, setEditedStatus] = useState("");
     const [editedDeadline, setEditedDeadline] = useState("");
-    const navigate = useNavigate(); // Initialize navigate
+    const navigate = useNavigate(); 
 
-    // Fetch tasks from database
+    
     useEffect(() => {
         axios.get('http://127.0.0.1:3001/getTodoList')
             .then(result => {
@@ -19,7 +19,7 @@ function Todo() {
             .catch(err => console.log(err));
     }, []);
 
-    // Function to toggle the editable state for a specific row
+    
     const toggleEditable = (id) => {
         const rowData = todoList.find((data) => data._id === id);
         if (rowData) {

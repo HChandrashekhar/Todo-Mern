@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server:{
     host:"0.0.0.0",
-    port:5000
+    port:5000,
+    allowedHosts:["todo-mern-1-0r7i.onrender.com"]
   },
 })
