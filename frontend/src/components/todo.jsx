@@ -12,7 +12,7 @@ function Todo() {
 
     
     useEffect(() => {
-        axios.get('http://127.0.0.1:27017/getTodoList')
+        axios.get('https://todo-mern-backend-tbsh.onrender.com/getTodoList')
             .then(result => {
                 setTodoList(result.data);
             })
@@ -48,7 +48,7 @@ function Todo() {
             return;
         }
 
-        axios.post('https://todo-mern-2-wne4.onrender.com/updateTodoList/' + id, editedData)
+        axios.post('https://todo-mern-backend-tbsh.onrender.com/updateTodoList/' + id, editedData)
             .then(result => {
                 console.log(result);
                 setEditableId(null);
@@ -63,7 +63,7 @@ function Todo() {
    
     const deleteTask = (id) => {
         if (window.confirm("Are you sure you want to delete this task?")) {
-            axios.delete(`https://todo-mern-2-wne4.onrender.com/deleteTodoList/${id}`)
+            axios.delete(`https://todo-mern-backend-tbsh.onrender.com/deleteTodoList/${id}`)
                 .then(result => {
                     console.log(result);
                     setTodoList(todoList.filter((task) => task._id !== id));
