@@ -7,6 +7,6 @@ export default defineConfig({
   server:{
     host:"0.0.0.0",
     port:5000,
-    allowedHosts:["todo-mern-1-0r7i.onrender.com"]
+    allowedHosts:["todo-mern-frontend-2hmq.onrender.com"]
   },
 })
