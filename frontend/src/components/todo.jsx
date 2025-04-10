@@ -12,7 +12,7 @@ function Todo() {
 
     
     useEffect(() => {
-        axios.get('https://todo-mern-2-wne4.onrender.com/getTodoList')
+        axios.get('http://127.0.0.1:27017/getTodoList')
             .then(result => {
                 setTodoList(result.data);
             })
